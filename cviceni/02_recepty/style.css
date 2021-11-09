@@ -1,7 +1,12 @@
 /* nejsme vcerejsi, pouzivame moderni box model */
-html { box-sizing: border-box; }
-*, ::after, ::before { box-sizing: inherit; }
-
+html {
+  box-sizing: border-box;
+}
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
 
 /* -------------------------------------------------- */
 
@@ -17,23 +22,140 @@ středně široké obrazovky:
 }
 */
 
-
 body {
-    margin: 0;
-    font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
 }
-
-.paticka {
-    text-align: center;
-    font-size: 14px;
-    color: silver;
-}
-
-.paticka a {
-    color: silver;
-}
-
 
 /* ------------------------------- */
 /* ----- DOLE BUDE TVOJE CSS ----- */
 /* ------------------------------- */
+p {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+h2 {
+  font-weight: 800;
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+h2,
+h3,
+p {
+  margin: 0;
+  color: white;
+}
+
+.hlavni {
+  background-image: url(./images/salat.jpg);
+  min-height: 200px;
+}
+
+.prvni {
+  background-image: url(./images/chlebicek.jpg);
+}
+
+.druhy {
+  background-image: url(./images/cizrna.jpg);
+}
+
+.treti {
+  background-image: url(./images/tacos.jpg);
+}
+
+.ctvrty {
+  background-image: url(./images/burger.jpg);
+}
+
+.recept {
+  background-size: cover;
+  background-position: center;
+  border-bottom: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.maly {
+  min-height: 90px;
+}
+
+h2,
+h3 {
+  order: 1;
+}
+
+.kontejner {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: 480px) {
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  .hlavni {
+    min-height: 250px;
+  }
+
+  .maly {
+    min-height: 150px;
+    width: 50%;
+  }
+
+  .recept {
+    padding: 1.25rem;
+  }
+
+  .kontejner-maly {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 400px;
+  }
+
+  .prvni,
+  .druhy {
+    border-right: 1px solid white;
+  }
+}
+
+@media (min-width: 860px) {
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+  }
+
+  .hlavni {
+    min-height: 400px;
+    flex-basis: 33.3%;
+    border-right: 1px solid white;
+  }
+
+  .kontejner-maly {
+    flex-basis: 66.6%;
+  }
+
+  .maly {
+    min-height: 200px;
+  }
+
+  .recepty {
+    display: flex;
+  }
+}
